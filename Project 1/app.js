@@ -8,17 +8,6 @@ new Vue({
        innerHealthBarStyle : 'background-color: green; margin: 0; color: white;',
        log: []
    },
-    computed:{
-       showLog: function(){
-           return this.hasGameStarted || this.log.length > 0;
-       },
-        playerHealthClass: function(){
-            return this.innerHealthBarStyle + 'width:' + this.playerHealth + '%';
-        },
-        monsterHealthClass: function(){
-            return this.innerHealthBarStyle + 'width:' + this.monsterHealth + '%';
-        }
-    },
     methods:{
        startGame : function(){
            this.clearData();
