@@ -2,7 +2,7 @@
     <div class="col-xs-12 col-sm-6">
         <p v-if="!server">No server selected</p>
         <p v-if="server">Server ID: {{server.id}} - Status: {{server.status}}</p>
-        <button v-if="server.status !== 'normal'" @click="resetToNormal()">Change back to normal</button>
+        <button v-if="server && server.status != 'Normal'" @click="resetToNormal()">Change back to Normal</button>
     </div>
 </template>
 
